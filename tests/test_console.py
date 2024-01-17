@@ -1,5 +1,3 @@
-test_console.py
-
 #!/usr/bin/python3
 """Defines unittests for console.py.
 
@@ -1570,4 +1568,3 @@ class TestHBNBCommand_count(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
