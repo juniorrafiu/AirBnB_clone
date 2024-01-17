@@ -15,12 +15,13 @@ from models import storage
 import shlex
 from datetime import datetime
 
+
 class HBNBCommand(cmd.Cmd):
     """HBNB class"""
     prompt = '(hbnb) '
     __classes = ["BaseModel", "User",
-        "State", "City",
-        "Amenity", "Place", "Review"]
+                 "State", "City",
+                 "Amenity", "Place", "Review"]
 
     def do_create(self, line):
         """Creates a new instance of BaseModel,
@@ -150,7 +151,6 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** no instance found **")
 
-
     def do_quit(self, line):
         """Exit the interpreter"""
         return True
@@ -164,12 +164,10 @@ class HBNBCommand(cmd.Cmd):
         """Help message for quit command."""
         print("Quit command to exit the program")
 
-
     def emptyline(self):
         """Empty line"""
         pass
 
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
-
-
