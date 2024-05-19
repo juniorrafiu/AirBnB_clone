@@ -16,7 +16,7 @@ class BaseModel():
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
     def save(self):
-        """
+        """ 
         Updates the public instance attribute
         updated_at
         """
@@ -27,7 +27,6 @@ class BaseModel():
         Returns a dictionary containing all keys/values of __dict__
         of the instance
         """
-        dict = {"__class__": self.__class__.__name__,
-                "created_at": self.created_at.isoformat(),
-                "updated_at": self.updated_at.isoformat()}
+        dict = {"__class__": self.__class__.__name__, "created_at": self.created_at.isoformat(
+        ), "updated_at": self.updated_at.isoformat()}
         return dict
