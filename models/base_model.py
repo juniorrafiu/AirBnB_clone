@@ -29,4 +29,6 @@ class BaseModel():
         """
         dict = {"__class__": self.__class__.__name__, "created_at": self.created_at.isoformat(
         ), "updated_at": self.updated_at.isoformat()}
-        return dict
+        dict_copy = self.__dict__.copy()
+        dict_copy.update(dict)
+        return dict_copy
