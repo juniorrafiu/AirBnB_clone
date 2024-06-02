@@ -9,6 +9,7 @@ import unittest
 
 class TestBaseModel(unittest.TestCase):
     """Represent a TestBaseModel."""
+    
 
     def test_id_is_uuid(self):
         """Test that id is a valid UUID"""
