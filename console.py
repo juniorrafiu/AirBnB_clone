@@ -2,18 +2,19 @@ import cmd
 from models.base_model import BaseModel  
 
 class HBNBCommand(cmd.Cmd):
+    """HBNB class"""
     prompt = "(hbnb)"
-    classes = {'BaseModel': BaseModel}
+    __classes = {'BaseModel': BaseModel}
 
     def do_create(self, arg):
         """Creates a new instance of BaseModel"""
         if not arg:
             print("** class name missing **")
             return
-        if arg not in HBNBCommand.classes:
+        if arg not in HBNBCommand.__classes:
             print("** class doesn't exist **")
             return
-        new_instance = HBNBCommand.classes[arg]()
+        new_instance = HBNBCommand.__classes[arg]()
         new_instance.save()
         print(new_instance.id)
             
