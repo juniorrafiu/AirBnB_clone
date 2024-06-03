@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 
 """
 This module defines the HBNBCommand class, which provides a command-line
