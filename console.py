@@ -1,5 +1,4 @@
 import cmd
-import sys
 from models.base_model import BaseModel  
 
 class HBNBCommand(cmd.Cmd):
@@ -17,8 +16,6 @@ class HBNBCommand(cmd.Cmd):
         new_instance = HBNBCommand.classes[arg]()
         new_instance.save()
         print(new_instance.id)
-
-    def do_show(self, arg)
             
 
     def do_quit(self, arg):
