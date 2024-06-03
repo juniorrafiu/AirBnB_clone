@@ -1,6 +1,11 @@
 import cmd
 from models.base_model import BaseModel
 
+"""
+This module defines the HBNBCommand class, which provides a command-line
+interface for creating, managing, and interacting with BaseModel instances.
+"""
+
 
 class HBNBCommand(cmd.Cmd):
     """HBNB class"""
