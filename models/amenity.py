@@ -1,6 +1,16 @@
+"""
+the module of Amenity.
+it inherits from BaseModel.
+"""
 from models.base_model import BaseModel
+
+
 class Amenity(BaseModel):
+    """
+    Class of Amenity.
+    Attributes:
+        name (str): amenities name.
+
+    """
     name = ''
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
