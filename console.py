@@ -34,6 +34,9 @@ class HBNBCommand(cmd.Cmd):
             print(new_base.id)
 
     def do_show(self, arg):
+        """Prints the string representation of an
+        instance by its class name and id
+        """
         args = arg.split()
         if len(args) == 0:
             print("** class name missing **")
@@ -52,6 +55,8 @@ class HBNBCommand(cmd.Cmd):
         print(storage.all()[key])
 
     def do_destroy(self, arg):
+        """Deletes an instance from memory
+          by its class name and id"""
         args = arg.split()
         if len(args) == 0:
             print("** class name missing **")
@@ -71,6 +76,10 @@ class HBNBCommand(cmd.Cmd):
         storage.save()
 
     def do_all(self, arg):
+        """
+        Prints all string representation of all instances
+        based on the class name
+        """
         if arg:
             if arg not in HBNBCommand.__classes:
                 print("** class doesn't exist **")
@@ -82,6 +91,10 @@ class HBNBCommand(cmd.Cmd):
         print(obj_list)
 
     def do_update(self, arg):
+        """
+        Updates an instance based on the class name
+        and id by adding or updating attribute
+        """
         args = arg.split()
         if len(args) == 0:
             print("** class name missing **")
