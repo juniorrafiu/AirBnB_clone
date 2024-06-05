@@ -29,7 +29,7 @@ class HBNBCommand(cmd.Cmd):
         elif arg not in HBNBCommand.__classes:
             print("** class doesn't exist **")
         else:
-            new_base = BaseModel()
+            new_base = HBNBCommand.__classes[arg]()
             new_base.save()
             print(new_base.id)
 
