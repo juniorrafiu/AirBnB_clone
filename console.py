@@ -19,8 +19,8 @@ from models.review import Review
 class HBNBCommand(cmd.Cmd):
     """HBNB class"""
     prompt = "(hbnb)"
-    __classes = {'BaseModel': BaseModel, 'User': User, "State": State,
-                 "City": City, "Amenity": Amenity, "Place": Place, "Review": Review}
+    __classes = {'BaseModel': BaseModel, 'User': User, 'State': State,
+                 'City': City, 'Amenity': Amenity, 'Place': Place, 'Review': Review}
 
     def do_create(self, arg):
         """Creates a new instance of BaseModel"""
